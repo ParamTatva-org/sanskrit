@@ -82,6 +82,9 @@ cd sanskrit
 # Install dependencies
 pip install -r requirements.txt
 
+# Download model weights (required before running inference)
+python weights/nalanda-62m-multi/download_weights.py
+
 # Run inference script with Nalanda model
 python src/nalanda_inference.py --model_path ./weights/nalanda-62m-multi --prompt "कः भवान्?"
 ```
