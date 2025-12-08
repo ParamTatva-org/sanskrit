@@ -11,7 +11,7 @@ from .embeddings import (
 
 # Conditional import for diffusion models (requires diffusers library)
 try:
-    from .diffusion_models import (
+    from .diffusion_models import (  # noqa: F401
         SanskritImageGenerator,
         SanskritVideoGenerator,
         PTKGuidedDiffusion,

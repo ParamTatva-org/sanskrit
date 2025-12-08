@@ -193,9 +193,9 @@ if __name__ == "__main__":
         ) * config.num_layers
         total_params = embedding_params + layer_params
 
-        print(f"\n{size.upper()} Configuration:")
+        print(f"\n{size.upper()} Configuration:")  # noqa: E231
         print(f"  Layers: {config.num_layers}")
         print(f"  Hidden dim: {config.hidden_dim}")
         print(f"  Heads: {config.num_heads}")
         print(f"  Intermediate dim: {config.intermediate_dim}")
-        print(f"  Estimated parameters: {total_params / 1e6:.1f}M")
+        print(f"  Estimated parameters: {total_params / 1e6:.1f}M")  # noqa: E231

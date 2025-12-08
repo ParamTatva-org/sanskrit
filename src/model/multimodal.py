@@ -6,7 +6,7 @@ Combines Vision/Video Encoders with the Paramtatva Transformer Decoder.
 
 import torch
 import torch.nn as nn
-from typing import Optional, Tuple, Dict, Union, Any
+from typing import Optional, Tuple, Dict, Any
 import torchvision.models as models
 from torchvision.models import ResNet50_Weights, ViT_B_16_Weights
 from torchvision.models.video import r2plus1d_18, R2Plus1D_18_Weights

@@ -68,7 +68,8 @@ def main():
         if not checkpoint_path or not os.path.exists(checkpoint_path):
             print(f"Error: Model file not found at {args.model_path}")
             # We can't proceed in Secure Mode without weights/vocab from checkpoint
-            # But for verification of script structure (without actual weights), let's allow fallback if explicitly testing
+            # But for verification of script structure (without actual weights),
+            # let's allow fallback if explicitly testing
             print("WARNING: Proceeding without checkpoint (Verification Mode)")
             checkpoint = None
             vocab_list = None

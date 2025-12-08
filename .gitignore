@@ -3,3 +3,4 @@ model.pt
 video_encoder.pt
 vision_encoder.pt
 vocab.json
+.pytest_cache/

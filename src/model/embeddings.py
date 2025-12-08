@@ -1,7 +1,6 @@
 import torch
 import torch.nn as nn
-from typing import Dict, Optional, Tuple, Any, List
-import math
+from typing import Dict, Optional, Any
 
 
 class ParamtatvaEmbedding(nn.Module):
