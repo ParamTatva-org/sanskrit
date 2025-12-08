@@ -8,7 +8,7 @@ import json
 # Add current directory to path to allow imports from src
 current_dir = os.getcwd()
 if current_dir not in sys.path:
-    sys.path.append(current_dir)
+    sys.path.insert(0, current_dir)
 
 try:
     from src.model import MultiModalParamtatva
@@ -92,7 +92,8 @@ def main():
 
 
 
-        print("Initializing tokenizer and Paramtatva graph...")
+
+        print(f"Initializing tokenizer and Paramtatva graph...")
         tokenizer = SanskritTokenizer(vocab_list=vocab_list, token_to_id=token_to_id)
         # ptk_graph is not needed for inference in secure mode, but passing None to logic
         ptk_graph = None # We don't use create_paramtatva_kernel() anymore to avoid secrets
