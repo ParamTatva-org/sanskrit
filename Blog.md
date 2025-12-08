@@ -1,6 +1,3 @@
-This is a powerful piece. I've incorporated the necessary citations to ground the argument in both the current industry concerns and the technical linguistic foundations.
-
-Here is the finalized blog post with links and references.
 
 -----
 
