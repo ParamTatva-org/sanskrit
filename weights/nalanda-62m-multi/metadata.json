@@ -1,0 +1,11 @@
+{
+  "folder_name": "checkpoint-2025-12-08-small-256d-6l-best-step800000",
+  "checkpoint_type": "best",
+  "step": 800000,
+  "epoch": null,
+  "val_loss": 3.1109791747452453,
+  "timestamp": "2025-12-08T00:37:53.755671",
+  "model_size": "small",
+  "hidden_dim": 256,
+  "num_layers": 6
+}
