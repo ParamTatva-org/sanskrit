@@ -111,7 +111,7 @@ This project was built upon collaborative efforts and generous support, demonstr
 
 Our deep gratitude to the **AI4Bharat team** for the **IndicTrans** project. Their work in providing high-quality multilingual and parallel corpora collection was instrumental in training our Sanskrit-native foundation model, allowing us to build a robust corpus efficiently.
 
-### 2\. Google Startup Grant
+### 2\. Google AI Startup Grant
 
 We extend our sincere thanks to the **Google Startup Grant** for providing essential cloud compute resources. This support was critical in covering the significant computational overhead required for pre-training and finetuning the model, adhering to the mission of promoting open-source AI innovation.
 
