@@ -83,6 +83,14 @@ def main():
                         vocab_list = vocab_data
                     elif isinstance(vocab_data, dict):
                         token_to_id = vocab_data
+        
+        # Fallback for verification if no checkpoint/vocab loaded
+        if vocab_list is None and token_to_id is None:
+             if checkpoint is None:
+                print("WARNING: Creating dummy vocabulary for verification...")
+                vocab_list = ['<PAD>', '<UNK>', '<BOS>', '<EOS>', '<SPACE>', '<NL>', 'अ'] + ['a'] * 100
+
+
 
         print("Initializing tokenizer and Paramtatva graph...")
         tokenizer = SanskritTokenizer(vocab_list=vocab_list, token_to_id=token_to_id)

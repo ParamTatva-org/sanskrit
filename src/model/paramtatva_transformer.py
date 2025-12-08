@@ -11,7 +11,7 @@ from typing import Optional, Tuple, Dict, Any
 import math
 
 from .model_configs import ModelConfig
-from ..paramtatva.ptk_embeddings import (
+from .embeddings import (
     ParamtatvaEmbedding,
     PratyaharaAttentionBias,
     MaBridgeNormalization

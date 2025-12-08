@@ -3,6 +3,7 @@
 from .paramtatva_transformer import ParamtatvaTransformer, TransformerBlock
 from .model_configs import ModelConfig, get_config
 from .multimodal import MultiModalParamtatva, VisionEncoder, VideoEncoder
+from .embeddings import ParamtatvaEmbedding, PratyaharaAttentionBias, MaBridgeNormalization
 
 # Conditional import for diffusion models (requires diffusers library)
 try:
@@ -23,6 +24,9 @@ __all__ = [
     'MultiModalParamtatva',
     'VisionEncoder',
     'VideoEncoder',
+    'ParamtatvaEmbedding',
+    'PratyaharaAttentionBias',
+    'MaBridgeNormalization',
 ]
 
 if _DIFFUSION_AVAILABLE:
