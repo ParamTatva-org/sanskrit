@@ -1,7 +1,8 @@
-
 -----
 
-# Nalanda-62M-Multi: The Sanskrit-Native Multimodal LLM
+![CI](https://github.com/ParamTatva-org/sanskrit/actions/workflows/ci.yml/badge.svg)
+
+# Nalanda-62M Multi-Modal Model (Sanskrit/Hindi/English)
 
 **A Highly Efficient, Compact, and Open-Source Foundation Model**
 

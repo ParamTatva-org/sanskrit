@@ -1,0 +1,8 @@
+pytest
+black
+flake8
+pre-commit
+torch
+transformers
+pillow
+tokenizers

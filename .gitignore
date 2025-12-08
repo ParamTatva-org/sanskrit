@@ -1,0 +1,5 @@
+__pycache__/
+model.pt
+video_encoder.pt
+vision_encoder.pt
+vocab.json

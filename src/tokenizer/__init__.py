@@ -2,4 +2,4 @@
 
 from .inference_tokenizer import SanskritTokenizer
 
-__all__ = ['SanskritTokenizer']
+__all__ = ["SanskritTokenizer"]
