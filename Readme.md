@@ -64,6 +64,34 @@ The **Govardhan** model concept (1M parameters) is based on the finding that San
 
 -----
 
+## 🏆 Linguistic Dexterity Benchmark (LDB)
+
+The **Linguistic Dexterity Benchmark (LDB)** measures a model's ability to handle high-precision instructions for multimodal and robotic tasks. **Nalanda-62M-Multi** sets a new standard in this benchmark, leveraging the deterministic properties of Sanskrit to eliminate ambiguity in complex control systems.
+
+### 1. Text Dexterity
+Sanskrit's high information density results in significantly shorter, more precise prompts. The **Token Compression Ratio (TCR)** advantage allows Nalanda to encode complex logic in fewer tokens than English models.
+
+![Text Dexterity](./resources/text_dexterity.png)
+
+### 2. Image Dexterity (Multimodal Generation)
+Nalanda translates precise Sanskrit descriptions (e.g., specific Mudras) into accurate visual representations with higher fidelity than English prompts, which often suffer from semantic drift.
+
+![Image Dexterity](./resources/image_dexterity.png)
+
+### 3. Video Dexterity (Temporal Sequencing)
+For video generation, sequencing is critical. Nalanda's grammar explicitly handles temporal ordering (using specialized verb forms and case endings), resulting in coherent multi-step video sequences from single prompts.
+
+![Video Dexterity](./resources/video_dexterity.png)
+
+### 4. Robotics Dexterity (Kinematic Precision)
+The **Kāraka** system (Agent, Instrument, Object roles) allows Nalanda to control robotic arms with zero ambiguity. Instructions for trajectory, speed, and force are encoded deterministically, reducing error rates in robotic manipulation tasks.
+
+![Robotics Dexterity](./resources/robotics_dexterity.png)
+
+**👉 [Read the full LDB Whitepaper](https://github.com/ParamTatva-org/Linguistic-Dexterity-Benchmark)**
+
+-----
+
 ## 🛠️ Usage and Deployment
 
 ### 1\. Weights and Inferencing Engine
