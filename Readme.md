@@ -88,11 +88,32 @@ pip install -r requirements.txt
 # Download model weights (required before running inference)
 python weights/nalanda-62m-multi/download_weights.py
 
-# Run inference script with Nalanda model
-python src/nalanda_inference.py --model_path ./weights/nalanda-62m-multi --prompt "कः भवान्?"
+### Run Inference
+
+**Text Generation (Nalanda LLM):**
+```bash
+python3 src/nalanda_inference.py --model_path ./weights/nalanda-62m-multi --prompt "कः भवान्?"
 ```
 
-### 2\. Online LLM Studio: mantr.net
+**Image Captioning / VQA:**
+```bash
+python3 src/nalanda_inference.py --model_path ./weights/nalanda-62m-multi --prompt "Describe this" --image_path ./input.jpg
+```
+
+**Generative AI (Diffusion):**
+Requires `diffusers` library.
+
+*Generate Image from Sanskrit Text:*
+```bash
+python3 diffusion_inference.py image --prompt "एकः सुंदरः हिमालयः" --output result.png
+```
+
+*Generate Video fround Image:*
+```bash
+python3 diffusion_inference.py video --image result.png --output video.mp4
+```
+
+### Features2\. Online LLM Studio: mantr.net
 
 For easy, no-setup exploration of the **Nalanda** model, use our dedicated online studio:
 
