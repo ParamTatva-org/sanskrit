@@ -110,7 +110,7 @@ The studio allows you to:
 
 This project was built upon collaborative efforts and generous support, demonstrating the potential for community-driven AI development.
 ### 1\. Sadgurudev Nikhileshwaranand
-This project would not have been possible without the guidance and support of **Sadgurudev Nikhileshwaranand**. His wisdom and encouragement have been invaluable in our journey. He gave the deterministic root of Paramtatva as in his Guru Mantra "ॐ परम तत्वाय नारायणाय गुरूभ्यो नमः" that led to the whole algorithm of deterministic accuracy.
+This project would not have been possible without the guidance and support of **Sadgurudev Nikhileshwaranand**. His wisdom and encouragement have been invaluable in our journey. He gave the deterministic root of Paramtatva as in his Guru Mantra "ॐ परम तत्वाय नारायणाय गुरूभ्यो नमः" that led to the whole algorithm of deterministic language model.
 <p align="center">
   गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः ।<br>
   गुरुः साक्षात् परब्रह्म तस्मै श्री गुरवे नमः ॥
