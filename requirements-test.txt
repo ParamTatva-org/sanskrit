@@ -6,3 +6,4 @@ torch
 transformers
 pillow
 tokenizers
+torchvision
