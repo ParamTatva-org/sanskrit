@@ -5,7 +5,7 @@
 
 ![CI](https://github.com/ParamTatva-org/sanskrit/actions/workflows/ci.yml/badge.svg)
 
-# Nalanda-62M Multi-Modal Model (Sanskrit/Hindi/English)
+# Sanskrit AI - Nalanda-62M & Govardhan-1M
 
 **A Highly Efficient, Compact, and Open-Source Foundation Model**
 
