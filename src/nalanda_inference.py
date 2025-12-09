@@ -38,6 +38,17 @@ def main():
     )
     parser.add_argument("--image_path", type=str, help="Path to input image")
     parser.add_argument("--video_path", type=str, help="Path to input video")
+    parser.add_argument(
+        "--device",
+        type=str,
+        default=None,
+        help="Device to use (cpu, cuda, mps). Default: auto-detect",
+    )
+    parser.add_argument(
+        "--cpu_quantize",
+        action="store_true",
+        help="Apply dynamic quantization for CPU inference (requires --device cpu)",
+    )
 
     args = parser.parse_args()
 
@@ -62,11 +73,14 @@ def main():
         sys.exit(1)
 
     # Determine device
-    device = "cpu"
-    if torch.cuda.is_available():
-        device = "cuda"
-    elif torch.backends.mps.is_available():
-        device = "mps"
+    if args.device:
+        device = args.device
+    else:
+        device = "cpu"
+        if torch.cuda.is_available():
+            device = "cuda"
+        elif torch.backends.mps.is_available():
+            device = "mps"
 
     print(f"Using device: {device}")
 
@@ -191,6 +205,14 @@ def main():
             print(
                 "WARNING: No checkpoint found. Using random initialization (Verification Mode)."
             )
+
+        # Apply CPU Quantization if requested
+        if device == "cpu" and args.cpu_quantize:
+            print("Applying dynamic quantization for CPU...")
+            model = torch.quantization.quantize_dynamic(
+                model, {torch.nn.Linear}, dtype=torch.qint8
+            )
+            print("Model quantized.")
 
         model.to(device)
         model.eval()

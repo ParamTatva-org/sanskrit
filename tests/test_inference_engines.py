@@ -100,12 +100,22 @@ class TestInferenceEngines(unittest.TestCase):
     def test_diffusion_imports(self):
         """Test that diffusion models can be imported (smoke test)."""
         # Run in subprocess to verify imports without loading models
-        code = "from src.model.diffusion_models import SanskritImageGenerator; print('Import Successful')"
+        # Also check sys.executable and attempt torch import clearly
+        code = (
+            "import sys; "
+            "print(f'Subprocess Python: {sys.executable}'); "
+            "import torch; "
+            "from src.model.diffusion_models import SanskritImageGenerator; "
+            "print('Import Successful')"
+        )
         cmd = [sys.executable, "-c", code]
+
+        env = os.environ.copy()
+        env["PYTHONPATH"] = str(PROJECT_ROOT) + os.pathsep + env.get("PYTHONPATH", "")
 
         result = subprocess.run(
             cmd,
-            env={**os.environ, "PYTHONPATH": str(PROJECT_ROOT)},
+            env=env,
             capture_output=True,
             text=True,
         )
@@ -113,8 +123,10 @@ class TestInferenceEngines(unittest.TestCase):
         # If diffusers is missing, it might print Error importing... which is fine as long as logic matches
         # but our code catches ImportError.
         # We just want to ensure NO syntax errors.
-        self.assertEqual(result.returncode, 0)
+        msg = f"Import failed. Return code: {result.returncode}\nSTDOUT: {result.stdout}\nSTDERR: {result.stderr}"
+        self.assertEqual(result.returncode, 0, msg=msg)
 
+    @unittest.skipIf(torch is None, "Torch not installed")
     def test_diffusion_cli_invocation(self):
         """Test diffusion_inference.py CLI (dry run via help)."""
         cmd = [sys.executable, str(PROJECT_ROOT / "diffusion_inference.py"), "--help"]

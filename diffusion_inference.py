@@ -1,6 +1,7 @@
 import argparse
 import os
 import sys
+import torch
 from PIL import Image
 
 # Add current directory to sys.path
@@ -28,12 +29,24 @@ def main():
         "--output", type=str, default="output_image.png", help="Output filename"
     )
     img_parser.add_argument("--steps", type=int, default=30, help="Inference steps")
+    img_parser.add_argument(
+        "--device",
+        type=str,
+        default=None,
+        help="Device to use (cpu, cuda, mps). Default: auto-detect",
+    )
 
     # Video Generation Args
     vid_parser = subparsers.add_parser("video", help="Generate Video from Image")
     vid_parser.add_argument("--image", type=str, required=True, help="Input image path")
     vid_parser.add_argument(
         "--output", type=str, default="output_video.mp4", help="Output folder/filename"
+    )
+    vid_parser.add_argument(
+        "--device",
+        type=str,
+        default=None,
+        help="Device to use (cpu, cuda, mps). Default: auto-detect",
     )
 
     args = parser.parse_args()
@@ -46,7 +59,12 @@ def main():
             )
             sys.exit(1)
         try:
-            generator = SanskritImageGenerator()
+            device = (
+                args.device
+                if args.device
+                else ("cuda" if torch.cuda.is_available() else "cpu")
+            )
+            generator = SanskritImageGenerator(device=device)
             image = generator.generate(
                 prompt=args.prompt, num_inference_steps=args.steps
             )
@@ -70,7 +88,12 @@ def main():
             image = Image.open(args.image).convert("RGB")
             image = image.resize((1024, 576))  # Resize to standard SVD resolution
 
-            generator = SanskritVideoGenerator()
+            device = (
+                args.device
+                if args.device
+                else ("cuda" if torch.cuda.is_available() else "cpu")
+            )
+            generator = SanskritVideoGenerator(device=device)
             frames = generator.generate(image)
 
             # Save frames as video options
