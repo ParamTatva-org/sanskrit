@@ -1,4 +1,7 @@
+ॐ गं गणपतये नमो नमः
+
 -----
+
 
 ![CI](https://github.com/ParamTatva-org/sanskrit/actions/workflows/ci.yml/badge.svg)
 
@@ -106,12 +109,19 @@ The studio allows you to:
 ## 🙏 Acknowledgements
 
 This project was built upon collaborative efforts and generous support, demonstrating the potential for community-driven AI development.
+### 1\. Sadgurudev Nikhileshwaranand
+This project would not have been possible without the guidance and support of **Sadgurudev Nikhileshwaranand**. His wisdom and encouragement have been invaluable in our journey. He gave the deterministic root of Paramtatva as in his Guru Mantra "ॐ परम तत्वाय नारायणाय गुरूभ्यो नमः" that led to the whole algorithm of deterministic accuracy.
+<p align="center">
+  गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः ।<br>
+  गुरुः साक्षात् परब्रह्म तस्मै श्री गुरवे नमः ॥
+</p>
 
-### 1\. IndicTrans
+
+### 2\. IndicTrans
 
 Our deep gratitude to the **AI4Bharat team** for the **IndicTrans** project. Their work in providing high-quality multilingual and parallel corpora collection was instrumental in training our Sanskrit-native foundation model, allowing us to build a robust corpus efficiently.
 
-### 2\. Google AI Startup Grant
+### 3\. Google AI Startup Grant
 
 We extend our sincere thanks to the **Google Startup Grant** for providing essential cloud compute resources. This support was critical in covering the significant computational overhead required for pre-training and finetuning the model, adhering to the mission of promoting open-source AI innovation.
 
